@@ -2,6 +2,7 @@ class Dog:
     def __init__(self, name): # self - instance of class, pass name, __  is called dunder
         print("creating instance of a dog... ")
         self._remembered_name = name  # private class variable remembered_name
+        self.__private = "private membet variable"  # cas be accessed using d1.__dict__
 
     def bark_name(self):
         print("Bark Bark ! My name is {}".format(self._remembered_name))
@@ -15,6 +16,7 @@ if __name__ == '__main__':
     d1 = Dog("Pluto")
     d1.bark_name()
     d1.set_name("Pepper")
+    #di.__dict__   # this will list down all the private member variables of the class
     
 
     
